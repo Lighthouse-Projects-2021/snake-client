@@ -13,13 +13,16 @@ const connect = function () {
     console.log("Successfully connected to game server")
   })
   //player's name
-  conn.on('connect', () => {
-    conn.write('Name: KCB');
-  });
+  conn.on("connect", () => {
+    console.log("connected to server")
+    conn.write("Name: KCB");
+  })
+
   // code that does something when the connection is first established
   conn.on("data", (info) => {
     console.log("Data received!")
     console.log(info)
+
   });
   return conn;
 };
