@@ -16,6 +16,7 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("connected to server")
     conn.write("Name: KCB");
+    conn.write("Say: Finally!!");
   })
 
   // code that does something when the connection is first established
